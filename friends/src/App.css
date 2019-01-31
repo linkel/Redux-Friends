@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+ul {
+  list-style: none;
+  padding: 0; 
+}
 .form-wrapper {
   display: flex;
   justify-content: space-between;

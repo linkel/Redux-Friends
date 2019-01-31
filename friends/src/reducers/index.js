@@ -1,5 +1,5 @@
 import {FETCHING,SUCCESS,FAILURE} from "../actions";
-import { ADDING, ADD_SUCCESS } from "../actions";
+import { ADDING, ADD_SUCCESS, UPDATING, UPDATE_SUCCESS } from "../actions";
 
 const initialState = {
     fetchingFriends: false,
@@ -36,6 +36,14 @@ const rootReducer = (state = initialState, action) => {
             friends: [...state.friends, ...action.payload],
             savingFriends: false,
             friendsSaved: true,
+        });
+      case UPDATING:
+        return Object.assign({}, state, { updatingFriends: true });
+      case UPDATE_SUCCESS:
+        return Object.assign({}, state, {
+            friends: [...state.friends, ...action.payload],
+            updatingFriend: false,
+            friendUpdated: true,
         });
       default:
         return state;

@@ -43,3 +43,22 @@ export const addFriend = (name, age, email) => {
         });
     }
 }
+
+export const updateFriend = (id, name, age, email) => {
+    const friendObj = {
+        name, age, email
+    }
+    const promise = axios.put(`http://localhost:5000/api/friends/${id}`, friendObj);
+    return dispatch => {
+        dispatch({ type: UPDATING });
+        promise
+        .then(response => {
+            console.log(response.data)
+            dispatch({ type: UPDATE_SUCCESS, payload: response.data });
+        })
+        .catch(err => {
+            console.log(err);
+            dispatch({ type: FAILURE });
+        });
+    }
+}
