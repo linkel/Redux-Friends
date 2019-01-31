@@ -3,8 +3,7 @@ import React from 'react';
 const Friends = (props) => {
     return (
         <ul className="friends">
-            This is my list
-            {props.friends.map((friend) => <li className="friend">{friend.name}</li>)}
+            {props.friends.map((friend) => <li key={friend.id} className="friend">{friend.name}</li>)}
         </ul>
     )
 }

@@ -3,6 +3,8 @@ import Friends from './components/Friends';
 import {connect} from 'react-redux';
 import {fetchFolk} from './actions';
 import './App.css';
+import MakeFriend from './components/MakeFriend';
+import UpdateFriend from './components/UpdateFriend';
 
 class App extends Component {
   componentDidMount() {
@@ -11,7 +13,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>hi welcome</h1>
+        <h2>tell me what you'd like me to do with your friends</h2>
+        <h3>friends</h3>
         <Friends friends={this.props.friends}/>
+        <div className="form-wrapper">
+          <MakeFriend/>
+          <UpdateFriend/>
+        </div>
+
       </div>
     );
   }
