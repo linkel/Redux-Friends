@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0; 
+}
+
+li {
+  margin: 30px;
+  display: flex;
+  justify-content: baseline;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+.make-friend {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 50px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 8px;
+}
+
+.update-friend {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 50px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 8px;
+}
+
+input {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  transition: 0.1s ease-in-out;
+  box-shadow: 0.2rem 0.2rem 0.4rem #888888;
+}
+
+input:focus {
+  box-shadow: 0.2rem 0.8rem 1.6rem #888888;
+}
+
+.red-x {
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
