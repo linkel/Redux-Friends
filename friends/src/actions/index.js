@@ -11,7 +11,7 @@ export const fetchFolk = () => {
         promise
         .then(response => {
             console.log(response.data)
-            dispatch({ type: SUCCESS, payload: response.data.results }); // 2nd state of success is dispatched IF the promise resolves
+            dispatch({ type: SUCCESS, payload: response.data }); // 2nd state of success is dispatched IF the promise resolves
         })
         .catch(err => {
             console.log(err);

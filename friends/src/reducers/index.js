@@ -19,7 +19,7 @@ const rootReducer = (state = initialState, action) => {
         return Object.assign({}, state, { fetchingFriends: true });
       case SUCCESS:
         return Object.assign({}, state, {
-          friends: [...state.friend, ...action.payload], // if our promise was successful
+          friends: [...state.friends, ...action.payload], // if our promise was successful
           fetchingFriends: false // also, set our boolean to false, because we're no longer fetching
         });
       case FAILURE:
