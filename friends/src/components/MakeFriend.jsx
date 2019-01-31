@@ -4,7 +4,7 @@ import {addFriend} from '../actions';
 
 const MakeFriend = props => {
     return (
-        <form onSubmit={(e) => props.addFriend(e.target[0].value, e.target[1].value, e.target[2].value)} className="make-friend">
+        <form onSubmit={(e) => {e.preventDefault(); props.addFriend(e.target[0].value, e.target[1].value, e.target[2].value)}} className="make-friend">
             <h1>make a new friend</h1>
             <input type="text" placeholder="name"></input>
             <input type="number" placeholder="age"></input>
