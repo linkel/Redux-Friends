@@ -31,7 +31,8 @@ const mapStateToProps = state => {
   return {
     friends: state.friends,
     error: state.error, 
-    fetchingFriends: state.fetchingFriends 
+    fetchingFriends: state.fetchingFriends,
+    friendsFetched: state.friendsFetched,
   };
 };
 
